@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Dashboard</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK9 4CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .dashboard {
+                display: flex;
+            }
+
+            .sidebar {
+                background-color: #1076a1;
+                color: #ffffff;
+                padding: 20px;
+                width: 250px;
+            }
+
+            .sidebar-logo {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .sidebar-logo img {
+                max-width: 80%;
+                height: auto;
+            }
+
+            .sidebar a img {
+                width: 45px;
+                height: 45px;
+                margin-right: 10px;
+            }
+
+            .sidebar ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sidebar li {
+                margin-bottom: 10px;
+            }
+
+            .sidebar a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 27px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+            }
+
+            .main-content {
+                flex-grow: 1;
+                margin-left: 20px;
+                background-color: #ffffff;
+            }
+
+            .navbar {
+                background-color: #1076a1;
+                color: #ffffff;
+                padding: 25px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .navbar .user img {
+                max-width: 8%;
+                height: auto;
+                padding-left: 91%;
+            }
+
+            /* .navbar .dropdown {
+                position: relative;
+                display: list-item;
+            }
+
+            .navbar .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 100px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+                z-index: 2;
+            }
+
+            .navbar .dropdown:hover .dropdown-content {
+                display: block;
+            } */
+
+            /* Dropdown Button */
+            .dropbtn {
+                background-color: #04aa6d;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+            }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+
+            h1 {
+                text-align: left;
+                font-size: 64px;
+                font-weight: 1000;
+                padding-left: 20px;
+                text-decoration: underline;
+                margin-bottom: 20px;
+            }
+
+            /* Responsive Styles */
+
+            @media (max-width: 1920px) {
+                .dashboard {
+                    display: flex;
+                }
+
+                .sidebar {
+                    width: 250px;
+                }
+
+                .main-content {
+                    flex-grow: 1;
+                    margin-top: 50px;
+                }
+
+                .navbar {
+                    position: fixed;
+                    top: 0;
+                    left: 250px;
+                    right: 0;
+                    z-index: 1;
+                }
+
+                .b {
+                    padding-top: 80px;
+                }
+            }
+
+            @media (max-width: 1366px) {
+                .dashboard {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .sidebar {
+                    width: 200px;
+                }
+
+                .main-content {
+                    flex-grow: 1;
+                    margin-left: 50px;
+                }
+
+                .navbar {
+                    position: fixed;
+                    top: 0;
+                    left: 200px;
+                    right: 0;
+                    z-index: 1;
+                }
+
+                .b {
+                    padding-top: 80px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dashboard">
+            <div class="sidebar">
+                <div class="sidebar-logo">
+                    <img
+                        src="https://drive.google.com/uc?export=view&id=1HN1WxsHtxIP0LUSI9_h35PiUGntddTlM"
+                        alt="Logo"
+                    />
+                </div>
+                <ul>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="https://drive.google.com/uc?export=view&id=1zrmuCroVPET0GUZ-d7mAO0HOAqYe3UMz"
+                                alt=""
+                            />Data Visitor</a
+                        >
+                    </li>
+                    <li><hr /></li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="https://drive.google.com/uc?export=view&id=1DKGqkvcJYwyaI0OtrBqoA3t4bDQUVkFj"
+                                alt=""
+                            />Registration</a
+                        >
+                    </li>
+                    <li><hr /></li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="https://drive.google.com/uc?export=view&id=1_5EWea_avVnmFOpZp0-9QX_kp_RRG5LT"
+                                alt=""
+                            />Check In</a
+                        >
+                    </li>
+                    <li><hr /></li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="https://drive.google.com/uc?export=view&id=14NxswrSCE-9fBJ8pXp87Ar53v3KGQ3NL"
+                                alt=""
+                            />Feedback</a
+                        >
+                    </li>
+                    <li><hr /></li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="https://drive.google.com/uc?export=view&id=1JaP9KAlNaYqGqzF0BTAw19jq3q7_IUPp"
+                                alt=""
+                            />Settings</a
+                        >
+                    </li>
+                    <li><hr /></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <nav class="navbar bg-body-tertiary" style="opacity: 54%">
+                    <div class="navbar">
+                        <div
+                            class="profile-container"
+                            style="display: flex; gap: 10px"
+                        >
+                            <div class="drpbtn">
+                                <img
+                                    src="https://drive.google.com/uc?export=view&id=1EUoNNoqYk2jeEuIfdN0msdil2_Kcs4fg"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                />
+                            </div>
+                            <div class="dropdown" style="position: ">
+                                <img
+                                    style="
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    "
+                                    src="https://drive.google.com/uc?export=view&id=1aRHWJ2IAsFkq5gVqI-bTKxqXoPx8Pvi4"
+                                    alt=""
+                                    width="10"
+                                    height="10"
+                                />
+                                <div
+                                    class="dropdown-content"
+                                    style="position: relative"
+                                >
+                                    <a href="#">My Site</a>
+                                    <a href="#">Log out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div class="inner-content-tabbing-visitordetail my-3 py-3">
+                        <div class="mx-3 mb-3">
+                            <div class="col-md-12">
+                                <div class="card border-radius-8">
+                                    <div
+                                        class="card-body d-flex align-items-center"
+                                        style="background-color: #c3c3c3"
+                                    >
+                                        <h1 style="font-weight: bold">
+                                            Setting
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mt-5">
+                                <div
+                                    class="card"
+                                    style="background-color: #c3c3c3"
+                                >
+                                    <div class="card-body mt-2 mx-3">
+                                        <h3>
+                                            Allow Days
+                                            <i
+                                                class="fa-solid fa-star-of-life fa-2xs"
+                                                style="color: #ff0000"
+                                            ></i>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body mx-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Masukkan Hari Misal : Kamis, Jumat"
+                                            aria-label="Username"
+                                            aria-describedby="addon-wrapping"
+                                        />
+                                    </div>
+                                    <div class="px-4 mb-3 mt-3">
+                                        <button
+                                            class="btn btn-primary flex-center py-1 px-4 border-radius-8 btn-sm"
+                                            type="submit"
+                                            id="submit-reservation"
+                                            style="
+                                                background-color: #acbcb0;
+                                                color: black;
+                                                font-weight: bold;
+                                                float: left;
+                                            "
+                                        >
+                                            Back
+                                        </button>
+                                        <button
+                                            class="btn btn-primary flex-center px-4 mx-2 border-radius-8 btn-sm"
+                                            type="submit"
+                                            id="submit-reservation"
+                                            style="
+                                                background-color: #00ce2d;
+                                                color: white;
+                                                font-weight: bold;
+                                                float: right;
+                                            "
+                                        >
+                                            Save & Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
