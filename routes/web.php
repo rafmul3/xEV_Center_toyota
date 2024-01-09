@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Hash;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pengunjung.registrasi');
 });
 
 Route::resource('pengunjung', PengunjungController::class);
